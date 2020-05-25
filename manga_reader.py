@@ -41,9 +41,12 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.hlay1 = QtWidgets.QHBoxLayout()
         self.hlay1.setObjectName("hlay1")
 
-        self.toggle_hbar = QtWidgets.QRadioButton("Toggle Horizontal Scrolling")
+        self.toggle_hbar = QtWidgets.QRadioButton("HScroll")
         self.toggle_hbar.setChecked(False)
+        self.toggle_hbar.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.toggle_hbar.toggled.connect(lambda: self.fix_horizontal_scrolling())
+        self.topHorizontalLayout.addWidget(self.toggle_hbar)
+
 
         self.zoomOutButton = QtWidgets.QPushButton(self.centralwidget)
         self.zoomOutButton.setObjectName("zoomOutButton")
@@ -64,7 +67,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.zoomInButton.clicked.connect(lambda: self.zoomfunc(2))
         self.zoomInButton.setFixedWidth(30)
 
-        self.hlay1.addWidget(self.toggle_hbar)
+        # self.hlay1.addWidget(self.toggle_hbar)
         self.hlay1.addWidget(self.zoomOutButton)      
         self.hlay1.addWidget(self.zoomComboBox)
         self.hlay1.addWidget(self.zoomInButton)
