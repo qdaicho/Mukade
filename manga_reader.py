@@ -45,6 +45,7 @@ class Ui_MainWindow(QtWidgets.QWidget):
         self.toggle_hbar.setChecked(False)
         self.toggle_hbar.setLayoutDirection(QtCore.Qt.RightToLeft)
         self.toggle_hbar.toggled.connect(lambda: self.fix_horizontal_scrolling())
+        self.toggle_hbar.setToolTip("Enable or disable horizontal scroll bar")
         self.topHorizontalLayout.addWidget(self.toggle_hbar)
 
 
