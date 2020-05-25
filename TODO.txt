@@ -1,0 +1,3 @@
+connect next chapter button to a function
+Connect back button to main app
+make labels scrollable
